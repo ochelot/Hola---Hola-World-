@@ -60,6 +60,6 @@ void str_printf(char **buf, const char *format, ...)
   char *buffer = malloc( (_vscprintf(format, ptr) + 1) * sizeof(char) );
   vsprintf( buffer, format, ptr );
   va_end(ptr);
-  str_free(*buf);
+  str_free(buf);
   *buf = buffer;
 }
