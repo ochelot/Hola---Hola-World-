@@ -50,7 +50,7 @@ char *str_cat(char **str1, const char *str2)
 
 void str_free(char** buf)
 {
-    if (*buf) free(buf);
+    if (*buf) free(*buf);
 }
 
 void str_printf(char **buf, const char *format, ...)
